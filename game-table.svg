@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="380" viewBox="0 0 900 380">
+  <rect width="900" height="380" rx="28" fill="#dfe3f5"/>
+  <ellipse cx="450" cy="245" rx="300" ry="90" fill="#8b5a3c"/>
+  <circle cx="250" cy="100" r="55" fill="#f2b38f"/><circle cx="450" cy="85" r="55" fill="#bb7f5c"/><circle cx="650" cy="100" r="55" fill="#d89a72"/>
+  <path d="M205 185q45-55 90 0" fill="#3949a3"/><path d="M405 170q45-55 90 0" fill="#20254b"/><path d="M605 185q45-55 90 0" fill="#6a3dad"/>
+  <rect x="375" y="205" width="150" height="85" rx="10" fill="#f6f2d4"/>
+  <circle cx="415" cy="240" r="13" fill="#e05252"/><circle cx="465" cy="255" r="13" fill="#4c8cd6"/><circle cx="505" cy="225" r="13" fill="#63a85b"/>
+  <text x="450" y="345" text-anchor="middle" fill="#20254b" font-family="Arial" font-size="24" font-weight="bold">Play together. Meet new people.</text>
+</svg>

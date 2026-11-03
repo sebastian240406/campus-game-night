@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Game Night</title>
+  <link rel="icon" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Fixed navigation: each link matches a section ID below. -->
+  <nav class="navbar" aria-label="Main navigation">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#links">Links</a></li>
+      <li><button id="theme-button" type="button" aria-pressed="false">Dark mode</button></li>
+      <li><button id="reduce-motion-button" type="button" aria-pressed="false">Reduce Motion</button></li>
+    </ul>
+  </nav>
+  <header id="home" class="header-container">
+    <div class="header-item">
+      <img id="header-img" src="game-night-banner.svg" alt="Campus Game Night banner with dice and game pieces">
+    </div>
+    <div class="header-item">
+      <p class="event-label">PLAY • CONNECT • UNWIND</p>
+      <h1>Campus Game Night</h1>
+      <h3>Take a study break and find your next teammate.</h3>
+      <button class="header-button" type="button" onclick="document.getElementById('about').scrollIntoView()">Event Details</button>
+      <button class="header-button" type="button" onclick="document.getElementById('activities').scrollIntoView()">View Activities</button>
+    </div>
+  </header>
+
+  <main>
+
+  <section id="about" class="content-card revealable">
+    <h2>About the Event</h2>
+    <p>Campus Game Night brings college students together for board games, video games, and friendly competition. Students can come with friends or join a table and meet someone new. The event is for beginners and experienced players who want a fun break from classes.</p>
+  </section>
+
+  <section id="activities" class="content-card revealable">
+    <h2>Event Activities</h2>
+    <div class="activities-container">
+    <img class="activity-image" src="game-table.svg" alt="Students playing games together at a table">
+    <div class="activity-details">
+    <p>Students can play card games, board games, and friendly video game challenges.</p>
+    <ul class="activity-list">
+      <li>Welcome and find a table</li>
+      <li>Open play and friendly challenges</li>
+      <li>Final round and wrap-up</li>
+    </ul>
+    </div>
+    </div>
+  </section>
+
+  <section id="preview" class="content-card revealable">
+    <h2>Your Game Night Preview</h2>
+    <p>Watch a quick introduction to the evening: meet a teammate, pick a game, and join the fun.</p>
+    <video controls preload="metadata" playsinline poster="game-table.svg" aria-label="Campus Game Night event preview">
+      <source src="game-night-preview.webm" type="video/webm">
+      Your browser does not support this video. <a href="game-night-preview.webm">Download the preview</a>.
+    </video>
+    <p class="video-caption">Video text: Welcome to Campus Game Night. Meet your next teammate. Choose board games, card games, or video game challenges. Beginners welcome. Play, connect, and unwind.</p>
+  </section>
+
+  <section id="links" class="content-card revealable">
+    <h2>Helpful Links</h2>
+    <p><a href="https://www.codepath.org">CodePath</a></p>
+    <p><a href="https://www.fau.edu">Florida Atlantic University</a></p>
+  </section>
+  </main>
+  <footer class="footer">
+    <span>Keep exploring:</span>
+    <a href="https://www.codepath.org">CodePath</a>
+    <a href="https://www.fau.edu">Florida Atlantic University</a>
+  </footer>
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="380" viewBox="0 0 900 380">
+  <rect width="900" height="380" rx="28" fill="#20254b"/>
+  <circle cx="760" cy="65" r="150" fill="#353d73"/>
+  <text x="55" y="90" fill="#b8f275" font-family="Arial" font-size="20" letter-spacing="4">PLAY • CONNECT • UNWIND</text>
+  <text x="55" y="170" fill="white" font-family="Arial" font-size="52" font-weight="bold">CAMPUS</text>
+  <text x="55" y="230" fill="white" font-family="Arial" font-size="52" font-weight="bold">GAME NIGHT</text>
+  <rect x="650" y="145" width="150" height="150" rx="25" fill="#b8f275" transform="rotate(10 725 220)"/>
+  <g fill="#20254b"><circle cx="685" cy="185" r="11"/><circle cx="765" cy="185" r="11"/><circle cx="725" cy="220" r="11"/><circle cx="685" cy="260" r="11"/><circle cx="765" cy="260" r="11"/></g>
+</svg>

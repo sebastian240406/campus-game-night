@@ -1,0 +1,228 @@
+/* Colors shared throughout the page. */
+:root {
+  --bg-color: #f4f5fb;
+  --text-color: #20254b;
+  --accent-color: #343c83;
+  --border-color: #d8ddef;
+}
+
+* { box-sizing: border-box; }
+html { background-color: var(--bg-color); scroll-behavior: smooth; }
+body {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 96px 24px 110px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Tahoma, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Typography and the four required link states. */
+h1 { margin: 8px 0 14px; color: #252b61; font-size: clamp(32px, 5vw, 48px); line-height: 1.12; }
+h2 { margin: 0 0 14px; color: #252b61; font-size: 26px; }
+h3 { margin: 0 0 20px; color: #4d557b; font-size: 19px; font-weight: normal; }
+h4 { color: #252b61; font-size: 18px; }
+h5 { color: #252b61; font-size: 16px; }
+h6 { color: #252b61; font-size: 14px; }
+p { margin: 0 0 16px; }
+a:link { color: #343c83; text-decoration: underline; text-underline-offset: 3px; }
+a:visited { color: #744080; }
+a:hover { color: #9b350d; }
+a:active { color: #20254b; }
+button { font: inherit; }
+a:focus-visible, button:focus-visible { outline: 3px solid #9b350d; outline-offset: 4px; }
+
+/* The main header rule uses the name required by the rubric. */
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 28px;
+  align-items: center;
+  padding: 28px;
+  padding-top: 36px;
+  margin-bottom: 30px;
+  border: 2px solid var(--border-color);
+  border-radius: 22px;
+  background-color: #e9ecfa;
+  text-align: left;
+}
+.header-item:nth-of-type(1) { flex: 1 1 35%; min-width: 0; }
+.header-item:nth-of-type(2) { flex: 1 1 65%; min-width: 0; }
+#header-img {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #c3cbe6;
+  border-radius: 14px;
+}
+.event-label { color: #525b87; font-size: 12px; font-weight: bold; letter-spacing: 2px; }
+.header-button {
+  background-color: var(--accent-color);
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  padding: 11px 17px;
+  margin: 5px 6px 5px 0;
+  border: 2px solid var(--accent-color);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.header-button:hover { background-color: #20254b; border-color: #20254b; }
+.header-button:active { transform: translateY(1px); }
+
+/* Additional class rules style the content and illustrate the box model. */
+.content-card {
+  margin-bottom: 24px;
+  padding: 28px;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  background-color: white;
+  scroll-margin-top: 90px;
+}
+.activity-image { display: block; width: 100%; max-width: 650px; height: auto; margin: 0 auto 22px; border-radius: 12px; }
+.activity-list { margin: 10px 0 0; padding-left: 26px; list-style-type: square; }
+.activity-list li { padding-left: 6px; margin-bottom: 8px; }
+
+/* Stretch feature: fixed footer with two external links. */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  padding: 14px 20px;
+  border-top: 2px solid var(--border-color);
+  background-color: #e9ecfa;
+  text-align: center;
+  font-size: 14px;
+}
+
+@media (max-width: 640px) {
+  body { margin: 0 auto; padding: 86px 14px 140px; }
+  .header-container { flex-direction: column; padding: 24px 18px; text-align: center; }
+  .header-item:nth-of-type(1), .header-item:nth-of-type(2) { width: 100%; flex-basis: auto; }
+  .activities-container { flex-direction: column; }
+  .content-card { padding: 22px 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* Unit 4: fixed horizontal navigation with hover and keyboard states. */
+.navbar { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: #252b61; }
+.navbar ul { display: flex; justify-content: center; align-items: center; gap: 8px; list-style-type: none; padding: 10px 12px; margin: 0; }
+.navbar ul li { margin: 0; }
+.navbar ul li a { display: block; color: white; padding: 8px 14px; text-align: center; text-decoration: none; border-radius: 6px; font-weight: bold; }
+.navbar ul li a:visited { color: white; }
+.navbar ul li a:hover { background-color: #e9ecfa; color: #252b61; }
+.navbar ul li a:focus-visible { outline: 3px solid #ffcf73; outline-offset: 2px; }
+.navbar ul li a:active { background: #c3cbe6; color: #252b61; }
+.header-container { scroll-margin-top: 96px; }
+/* A second Flexbox container arranges the image and activity details. */
+.activities-container { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px; }
+.activities-container .activity-image { flex: 1 1 260px; width: 48%; min-width: 0; margin: 0; }
+.activity-details { flex: 1 1 240px; min-width: 0; }
+video { display: block; width: 100%; max-width: 720px; aspect-ratio: 16 / 9; margin: 0 auto 16px; border-radius: 12px; background: #252b61; }
+.video-caption { font-size: 13px; color: #4d557b; }
+@media (max-width: 640px) {
+  .navbar ul { gap: 2px; padding: 10px 4px; }
+  .navbar ul li a { padding: 8px 9px; font-size: 14px; }
+  .activities-container .activity-image { width: 100%; flex-basis: auto; }
+  .activity-details { flex-basis: auto; width: 100%; }
+}
+
+/* Unit 5: theme button and dark mode. */
+#theme-button {
+  padding: 8px 12px;
+  border: 2px solid #ffcf73;
+  border-radius: 8px;
+  background: #ffcf73;
+  color: #20254b;
+  font-weight: bold;
+  cursor: pointer;
+}
+#theme-button:hover { background: #ffe3ad; }
+#theme-button:focus-visible { outline: 3px solid white; outline-offset: 3px; }
+body.dark-mode {
+  --bg-color: #121629;
+  --text-color: #edf0ff;
+  --border-color: #465071;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  color-scheme: dark;
+}
+html:has(body.dark-mode) { background-color: #121629; }
+.dark-mode .header-container,
+.dark-mode .footer { background-color: #202740; }
+.dark-mode .content-card { background-color: #1b2138; }
+.dark-mode h1, .dark-mode h2, .dark-mode h3,
+.dark-mode h4, .dark-mode h5, .dark-mode h6 { color: #f3f4ff; }
+.dark-mode .event-label, .dark-mode .video-caption { color: #c4ccec; }
+.dark-mode a:link { color: #afc7ff; }
+.dark-mode a:visited { color: #d5b7ff; }
+.dark-mode a:hover { color: #ffcf73; }
+.dark-mode a:active { color: white; }
+.dark-mode .navbar { background: #191e35; }
+.dark-mode .navbar a:hover { background: #343c60; }
+@media (max-width: 640px) {
+  .navbar ul { flex-wrap: wrap; }
+  .navbar ul li a { padding: 8px 6px; font-size: 13px; }
+  #theme-button { padding: 6px 8px; font-size: 13px; }
+  body { padding-top: 120px; }
+  .content-card, .header-container { scroll-margin-top: 120px; }
+}
+
+/*** Animations — Unit 8 ***/
+.revealable {
+  --reveal-distance: 150px;
+  position: relative;
+  scroll-margin-top: var(--reveal-distance);
+}
+/* Content stays readable if JavaScript is unavailable. */
+.animations-ready .revealable {
+  opacity: 0;
+  transform: translateY(var(--reveal-distance));
+  transition: opacity 2s ease, transform 2s ease;
+}
+.animations-ready .revealable.active,
+.animations-ready .revealable:focus-within {
+  opacity: 1;
+  transform: translateY(0);
+  /* Keep anchor headings below the fixed navigation. */
+  scroll-margin-top: 150px;
+}
+.reduce-motion .revealable,
+.reduce-motion .revealable.active {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+html:has(body.reduce-motion) { scroll-behavior: auto; }
+#reduce-motion-button {
+  padding: 8px 12px;
+  border: 2px solid #ffcf73;
+  border-radius: 8px;
+  background: transparent;
+  color: #ffcf73;
+  font-weight: bold;
+  cursor: pointer;
+}
+#reduce-motion-button:hover { background: #343c60; }
+#reduce-motion-button:focus-visible { outline: 3px solid white; outline-offset: 3px; }
+.footer { z-index: 100; }
+@media (max-width: 640px) {
+  #reduce-motion-button { font-size: 13px; padding: 6px 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .animations-ready .revealable { transition: none; }
+}
